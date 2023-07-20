@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
+        xmlns:viewmodels="clr-namespace:WpfApp.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <viewmodels:MainViewModel></viewmodels:MainViewModel>
+    </Window.DataContext>
     <Grid>
-        
+        <Button Command="{Binding ClickAdd}" Content="{Binding Clicks}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="353,222,0,0"/>
+
     </Grid>
 </Window>
